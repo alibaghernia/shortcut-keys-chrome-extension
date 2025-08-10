@@ -3,6 +3,11 @@ document.addEventListener('keydown', (e) => {
         return;
     }
 
+    if (e.ctrlKey && e.code === 'KeyL') {
+        window.open('https://www.linkedin.com/');
+        return;
+    }
+
     if (e.code === 'KeyI') {
         window.open('https://www.instagram.com/');
         return;
