@@ -8,6 +8,11 @@ document.addEventListener('keydown', (e) => {
         return;
     }
 
+    if (e.ctrlKey && e.code === 'KeyC') {
+        window.open('https://calendar.google.com/calendar/u/1/r');
+        return;
+    }
+
     if (e.code === 'KeyI') {
         window.open('https://www.instagram.com/');
         return;
