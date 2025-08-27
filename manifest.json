@@ -7,7 +7,17 @@
         "default_popup": "./popup/index.html"
     },
     "background": {
-        "service_worker": "./background.js"
+        "service_worker": "./service_worker.js"
+    },
+    "commands": {
+        "open-chatgpt": {
+            "suggested_key": "Alt+C",
+            "description": "open chatGPt"
+        },
+        "open-youtube": {
+            "suggested_key": "Alt+Y",
+            "description": "open youtube"
+        }
     },
     "content_scripts": [
         {
