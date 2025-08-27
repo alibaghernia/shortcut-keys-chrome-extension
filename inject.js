@@ -13,6 +13,11 @@ document.addEventListener('keydown', (e) => {
         return;
     }
 
+    if (e.ctrlKey && e.code === 'KeyT') {
+        window.open('https://www.time.ir/');
+        return;
+    }
+
     if (e.code === 'KeyI') {
         window.open('https://www.instagram.com/');
         return;
