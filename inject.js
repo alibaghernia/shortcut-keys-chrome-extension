@@ -49,6 +49,12 @@ document.addEventListener('keydown', (e) => {
     }
 
     if (e.code === 'KeyL') {
+        const selectedText = window.getSelection().toString().trim()
+        if (selectedText) {
+            window.open(`https://www.ldoceonline.com/dictionary/${selectedText}`);
+            return;
+        }
+    }
         window.open('https://www.ldoceonline.com/');
         return;
     }
