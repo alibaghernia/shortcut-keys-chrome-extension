@@ -54,7 +54,6 @@ document.addEventListener('keydown', (e) => {
             window.open(`https://www.ldoceonline.com/dictionary/${selectedText}`);
             return;
         }
-    }
         window.open('https://www.ldoceonline.com/');
         return;
     }
