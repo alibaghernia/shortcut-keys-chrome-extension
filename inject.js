@@ -59,7 +59,8 @@ document.addEventListener('keydown', (e) => {
     // }
 
     if (e.code === 'KeyT') {
-        window.open('https://translate.google.com/?sl=en&tl=fa&op=translate');
+        const selectedText = encodeURIComponent(window.getSelection().toString().trim())
+        window.open(`https://translate.google.com/?sl=en&tl=fa&op=translate&text=${selectedText}`);
         return;
     }
 })
