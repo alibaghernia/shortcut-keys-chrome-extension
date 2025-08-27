@@ -73,4 +73,34 @@ document.addEventListener('keydown', (e) => {
         window.open(`https://translate.google.com/?sl=en&tl=fa&op=translate&text=${selectedText}`);
         return;
     }
+
+    if (e.code === 'KeyP') {
+        const faToEn = {
+            "ض": "q", "ص": "w", "ث": "e", "ق": "r", "ف": "t", "غ": "y", "ع": "u", "ه": "i", "خ": "o", "ح": "p", "ج": "[", "چ": "]",
+            // 
+            "ش": "a", "س": "s", "ی": "d", "ب": "f", "ل": "g", "ا": "h", "ت": "j", "ن": "k", "م": "l", "ک": ";", "گ": "'", "پ": "\\",
+            // 
+            "ظ": "z", "ط": "x", "ز": "c", "ر": "v", "ذ": "b", "د": "n", "ئ": "m", "و": ",",
+            // 
+            "؟": "?", "÷": "`", ")": "(", "(": ")",
+        }
+        const enToFa = Object.fromEntries(Object.entries(faToEn).map(([fa, en]) => [en, fa]))
+        const selectedText = window.getSelection().toString()
+        let result = ""
+        for (let ch of selectedText) {
+            ch = ch.toLowerCase()
+            if (faToEn[ch]) {
+                result += faToEn[ch]
+            } else if (enToFa[ch]) {
+                result += enToFa[ch]
+            } else {
+                result += ch
+            }
+        }
+        navigator.clipboard.writeText(result).catch(err => {
+            alert('Failed to copy text: ', err);
+        });
+        return;
+    }
+
 })
