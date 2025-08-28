@@ -30,6 +30,18 @@
             "css": [
                 "direction.css"
             ]
+        },
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "include_globs": [
+                "*://translate.google.*/*"
+            ],
+            "js": [
+                "google-translate-focus.js"
+            ],
+            "run_at": "document_idle"
         }
     ],
     "host_permissions": [
