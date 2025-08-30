@@ -13,10 +13,6 @@
         "open-chatgpt": {
             "suggested_key": "Alt+C",
             "description": "open chatGPt"
-        },
-        "open-youtube": {
-            "suggested_key": "Alt+Y",
-            "description": "open youtube"
         }
     },
     "content_scripts": [

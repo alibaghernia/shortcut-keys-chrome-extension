@@ -59,6 +59,11 @@ document.addEventListener('keydown', (e) => {
     }
 
     if (e.code === 'KeyY') {
+        const selectedText = window.getSelection().toString().trim()
+        if (selectedText && selectedText.length < 20) {
+            window.open(`https://www.youtube.com/results?search_query=${selectedText}`);
+            return;
+        }
         window.open('https://www.youtube.com/');
         return;
     }
