@@ -52,7 +52,7 @@ document.addEventListener('keydown', (e) => {
         return;
     }
 
-    if (e.shiftKey && e.code === 'KeyM') {
+    if (e.code === 'KeyM') {
         window.open('https://www.google.com/maps');
         return;
     }
