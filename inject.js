@@ -43,6 +43,15 @@ document.addEventListener('keydown', (e) => {
         return;
     }
 
+
+    if (e.code === 'KeyS') {
+        const selectedText = window.getSelection().toString().trim()
+        if (!selectedText) { return; }
+        const url = "https://www.google.com/search?q=" + encodeURIComponent(selectedText);
+        window.open(url);
+        return;
+    }
+
     if (e.shiftKey && e.code === 'KeyM') {
         window.open('https://www.google.com/maps');
         return;
